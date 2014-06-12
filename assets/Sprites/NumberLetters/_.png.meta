@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: 38c0b2bd41427fc4eaf086840afcd1e6
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: One
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1805
+        width: 86
+        height: 182
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Two
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1800
+        width: 148
+        height: 185
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Three
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1801
+        width: 138
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Four
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 1800
+        width: 152
+        height: 192
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Five
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1801
+        width: 140
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Six
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1803
+        width: 152
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Seven
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1801
+        width: 138
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Eight
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1801
+        width: 140
+        height: 186
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Nine
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 1801
+        width: 152
+        height: 186
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Zero
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 1800
+        width: 171
+        height: 185
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: A
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1551
+        width: 193
+        height: 198
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: B
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1551
+        width: 162
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: C
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1544
+        width: 169
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: D
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1551
+        width: 178
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: E
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1551
+        width: 144
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: F
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1551
+        width: 144
+        height: 201
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: G
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 1549
+        width: 189
+        height: 202
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: H
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1551
+        width: 184
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: I
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1551
+        width: 68
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: J
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 1520
+        width: 88
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: K
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1285
+        width: 170
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: L
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1285
+        width: 143
+        height: 194
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: M
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1283
+        width: 202
+        height: 198
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: N
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1285
+        width: 182
+        height: 198
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: O
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 1281
+        width: 194
+        height: 204
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: P
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1285
+        width: 171
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Q
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1255
+        width: 196
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: R
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 1285
+        width: 168
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: S
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 1279
+        width: 106
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: T
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 995
+        width: 146
+        height: 198
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: U
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 995
+        width: 169
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: V
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 992
+        width: 168
+        height: 199
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: W
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 997
+        width: 244
+        height: 194
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: X
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 992
+        width: 158
+        height: 200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Y
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 997
+        width: 166
+        height: 194
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Z
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 995
+        width: 137
+        height: 198
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: '!'
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 995
+        width: 60
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: '?'
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 995
+        width: 116
+        height: 198
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: a
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 705
+        width: 150
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: b
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 705
+        width: 153
+        height: 200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: c
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 705
+        width: 114
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: d
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 705
+        width: 154
+        height: 202
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: e
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 703
+        width: 137
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: f
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 707
+        width: 99
+        height: 202
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: g
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 671
+        width: 146
+        height: 178
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: h
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 705
+        width: 142
+        height: 199
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: i
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 707
+        width: 64
+        height: 190
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: j
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 672
+        width: 78
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: k
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 425
+        width: 154
+        height: 198
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: l
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 423
+        width: 66
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: m
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 423
+        width: 216
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: n
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 425
+        width: 142
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: o
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 423
+        width: 142
+        height: 145
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: p
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 385
+        width: 152
+        height: 183
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: q
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 385
+        width: 152
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: r
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 425
+        width: 104
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: s
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 421
+        width: 92
+        height: 152
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: t
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 167
+        width: 106
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: u
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 168
+        width: 144
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: v
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 167
+        width: 140
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: w
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 169
+        width: 202
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: x
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 167
+        width: 132
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: y
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 127
+        width: 144
+        height: 178
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: z
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 167
+        width: 126
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: '!'
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 167
+        width: 60
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: '?'
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 167
+        width: 116
+        height: 201
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,44 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A0F08686-8D45-7B5C-69AA-578FBDF5A878}") = "WALTER THE BEAR_LATEST_Android", "Assembly-CSharp.csproj", "{42FFA33C-F2CD-F2B4-D185-05F772EE39C7}"
+EndProject
+Project("{A0F08686-8D45-7B5C-69AA-578FBDF5A878}") = "WALTER THE BEAR_LATEST_Android", "Assembly-UnityScript.unityproj", "{3C1E8DFA-9116-9A19-7D65-685A95351BEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42FFA33C-F2CD-F2B4-D185-05F772EE39C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42FFA33C-F2CD-F2B4-D185-05F772EE39C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42FFA33C-F2CD-F2B4-D185-05F772EE39C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42FFA33C-F2CD-F2B4-D185-05F772EE39C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1E8DFA-9116-9A19-7D65-685A95351BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1E8DFA-9116-9A19-7D65-685A95351BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1E8DFA-9116-9A19-7D65-685A95351BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1E8DFA-9116-9A19-7D65-685A95351BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = null
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.EolMarker = Unix
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+	EndGlobalSection
+EndGlobal

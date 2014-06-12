@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{12369DE6-F3A2-F66E-835F-EFB43EE71149}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="assets\DestroyObj.cs" />
+     <Compile Include="assets\FadeC.cs" />
+     <Compile Include="assets\scripts\ALPHALETTER_LEVEL\AddTexture.cs" />
+     <Compile Include="assets\scripts\ALPHALETTER_LEVEL\AlphaGame.cs" />
+     <Compile Include="assets\scripts\ALPHALETTER_LEVEL\AlphaLetterGameManager.cs" />
+     <Compile Include="assets\scripts\COUNTING_LEVEL\CountGame.cs" />
+     <Compile Include="assets\scripts\COUNTING_LEVEL\CounterGameManager.cs" />
+     <Compile Include="assets\scripts\GAMES_MENU\GamesMenuClick.cs" />
+     <Compile Include="assets\scripts\HIDDEN_LEVEL\HiddenGameManager.cs" />
+     <Compile Include="assets\scripts\JIGZAW_LEVEL\ColliderFromPiece1.cs" />
+     <Compile Include="assets\scripts\JIGZAW_LEVEL\DragAndDrop.cs" />
+     <Compile Include="assets\scripts\JIGZAW_LEVEL\DragButtonClick.cs" />
+     <Compile Include="assets\scripts\JIGZAW_LEVEL\JigsawDrag.cs" />
+     <Compile Include="assets\scripts\JIGZAW_LEVEL\JigsawDragPlane.cs" />
+     <Compile Include="assets\scripts\JIGZAW_LEVEL\JigsawGameManagerClass.cs" />
+     <Compile Include="assets\scripts\JIGZAW_LEVEL\JigsawWinTrigger.cs" />
+     <Compile Include="assets\scripts\JIGZAW_LEVEL\JigzawGameManager.cs" />
+     <Compile Include="assets\scripts\MAIN_MENU\HomeButton.cs" />
+     <Compile Include="assets\scripts\MAIN_MENU\MainMenu.cs" />
+     <Compile Include="assets\scripts\MAIN_MENU\MainMenuButtons.cs" />
+     <Compile Include="assets\scripts\MAIN_MENU\MainMenuManager.cs" />
+     <Compile Include="assets\scripts\MAIN_MENU\ScaleAspectRatio.cs" />
+     <Compile Include="assets\scripts\PIANO_LEVEL\PianoButtonClick.cs" />
+     <Compile Include="assets\scripts\PIANO_LEVEL\PianoGameManager.cs" />
+     <Compile Include="assets\scripts\PIANO_LEVEL\RollandButtonClick.cs" />
+     <Compile Include="assets\scripts\PIANO_LEVEL\Sinus.cs" />
+     <Compile Include="assets\scripts\PIANO_LEVEL\WhiteNoise.cs" />
+     <Compile Include="assets\scripts\SHAPES_LEVEL\ShapeDragPlane.cs" />
+     <Compile Include="assets\scripts\SHAPES_LEVEL\ShapeWinTrigger.cs" />
+     <Compile Include="assets\scripts\SHAPES_LEVEL\ShapesGameManager.cs" />
+     <Compile Include="assets\scripts\SHAPES_LEVEL\UI_Script.cs" />
+     <Compile Include="assets\scripts\SPELL_LEVEL\QuizzButton.cs" />
+     <Compile Include="assets\scripts\SPELL_LEVEL\QuizzGame.cs" />
+     <Compile Include="assets\scripts\TALE\StoryManager.cs" />
+     <Compile Include="assets\scripts\TALE\TextAnimationCh1.cs" />
+     <Compile Include="assets\scripts\UI\BackButton.cs" />
+     <Compile Include="assets\scripts\UI\ButtonScaleAspect.cs" />
+     <Compile Include="assets\scripts\UI\GamesMenuButtons.cs" />
+     <Compile Include="assets\scripts\UI\PianoKeyScript.cs" />
+     <Compile Include="assets\scripts\UNKNOWN\FollowNumbersClick.cs" />
+     <Compile Include="assets\scripts\UNKNOWN\Game_Manager.cs" />
+     <Compile Include="assets\scripts\UNKNOWN\GridScript.cs" />
+     <Compile Include="assets\scripts\UNKNOWN\Movement_Script_Click.cs" />
+     <Compile Include="assets\scripts\UNKNOWN\Player_Script.cs" />
+     <Compile Include="assets\scripts\UNKNOWN\SmoothCameraMovement.cs" />
+     <None Include="assets\utility\standard assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="assets\utility\standard assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="assets\utility\standard assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="assets\utility\standard assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>C:/Users/Fer/Desktop/WALTER THE BEAR_LATEST_KEVIN_web-0705/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{64C5D50C-A515-98CA-7A81-C9EBE7369F83}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

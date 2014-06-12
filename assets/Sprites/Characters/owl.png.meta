@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: a29f9b311de67e24f90df9f791ede9d4
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: owl_mouh
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1755
+        width: 249
+        height: 214
+      alignment: 9
+      pivot: {x: .49999994, y: .396387398}
+    - name: owl_wing
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 1738
+        width: 103
+        height: 138
+      alignment: 9
+      pivot: {x: .50366801, y: .958941042}
+    - name: owl_eye1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1537
+        width: 132
+        height: 131
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: owl_eye2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1535
+        width: 132
+        height: 131
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: owl_top
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1333
+        width: 291
+        height: 82
+      alignment: 9
+      pivot: {x: .499999881, y: .173974007}
+    - name: owl_body
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 763
+        width: 390
+        height: 412
+      alignment: 9
+      pivot: {x: .499999911, y: .210438848}
+    - name: owl_tail
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 360
+        width: 213
+        height: 222
+      alignment: 9
+      pivot: {x: .487058103, y: .888245165}
+    - name: owl_leg
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 109
+        width: 132
+        height: 116
+      alignment: 9
+      pivot: {x: .479116499, y: .83269316}
+    - name: owl_branch
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 146
+        width: 781
+        height: 169
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: owl_mouth2
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 1761
+        width: 269
+        height: 217
+      alignment: 9
+      pivot: {x: .5, y: .360836476}
+  spritePackingTag: 
+  userData: 
