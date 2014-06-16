@@ -60,7 +60,7 @@ public class HomeButton : MonoBehaviour {
         GUI.backgroundColor = Color.clear;
 
         //Button clickable. You dont need anymore neither define the position( This needs to be properly tested).
-        if (GUI.Button(new Rect( 2050 - backButtonTexture.width, 1540 - backButtonTexture.height, backButtonTexture.width, backButtonTexture.height), backButtonTexture))
+        if (GUI.Button(new Rect( 2080 - backButtonTexture.width, 1545 - backButtonTexture.height, backButtonTexture.width, backButtonTexture.height), backButtonTexture))
         {
             backButtonTexture = backButtonTextureClicked;
             //Application.LoadLevel("MAIN_MENU");

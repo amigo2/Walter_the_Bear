@@ -22,6 +22,8 @@ public class ShapesGameManager : MonoBehaviour {
 	float duration = 1.0f;
 	
 	Vector3 targetPosition = new Vector3(-5, 0, 0);
+
+
 	
 	float steps = 100.0f;
 	float t = 20.0f;
@@ -61,8 +63,8 @@ public class ShapesGameManager : MonoBehaviour {
 
 
         shape1 = (GameObject)GameObject.Instantiate(shape1, new Vector3(targetPosition.x, targetPosition.y, 0), Quaternion.identity);
-        shape2 = (GameObject)GameObject.Instantiate(shape2, new Vector3(targetPosition.x, targetPosition.y - 4.5f, 0), Quaternion.identity);
-        shape3 = (GameObject)GameObject.Instantiate(shape3, new Vector3(targetPosition.x, targetPosition.y + 4.5f, 0), Quaternion.identity);
+        shape2 = (GameObject)GameObject.Instantiate(shape2, new Vector3(targetPosition.x, targetPosition.y - 3.5f, 0), Quaternion.identity);
+        shape3 = (GameObject)GameObject.Instantiate(shape3, new Vector3(targetPosition.x, targetPosition.y + 3.5f, 0), Quaternion.identity);
 		
 		shape1.transform.name = "piece1";
 		shape2.transform.name = "piece2";
@@ -93,11 +95,12 @@ public class ShapesGameManager : MonoBehaviour {
 			print("my little error");
 		}
 		
-		Debug.Log("Count to Win" + shapeDragPlaneClass.countToWin);
+		//Debug.Log("Count to Win" + shapeDragPlaneClass.countToWin);
 		
 		if (shapeDragPlaneClass.countToWin == 4)
 		{
-			GUI.Label(new Rect(10, 200, 200, 50), "'<size = 20>You Win!!!'");
+
+			GUI.Label(new Rect(10, 200, 200, 50), "'<size = 100>You Win!!!'");
 			Debug.Log("You winn"); 
 		}
 		

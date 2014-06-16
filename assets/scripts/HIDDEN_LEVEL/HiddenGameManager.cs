@@ -7,12 +7,12 @@ public class HiddenGameManager : MonoBehaviour {
     float originalHeight = 480;
 
     Vector3 scale;
-	Vector3 point1 = new Vector3(-7,0,0);
-	Vector3 point2 = new Vector3(1,0,0);
-	Vector3 point3 = new Vector3(8,0,0);
-	Vector3 trans1 = new Vector3 (3, 3, 3);
-	Vector3 trans2 = new Vector3 (1.8f, 1.8f, 1.8f);
-	Vector3 trans3 = new Vector3 (2.3f, 2.3f, 2.3f);
+	Vector3 point1 = new Vector3(-6,0,0);
+	Vector3 point2 = new Vector3(0,0,0);
+	Vector3 point3 = new Vector3(7,0,0);
+	Vector3 trans1 = new Vector3 (2	, 2, 2);
+	Vector3 trans2 = new Vector3 (0.8f, 0.8f, 0.8f);
+	Vector3 trans3 = new Vector3 (1.3f, 1.3f, 1.3f);
 
 	public GUIText message;
 
@@ -62,9 +62,9 @@ public class HiddenGameManager : MonoBehaviour {
     {
         for (int i = 0; i < 3; i++)
         {
-			int range = Random.Range (-5,5);
+			int range = Random.Range (-3,3);
 			Vector3 point  = new Vector3(0,0,0);
-			Vector3 trans = new Vector3(0,0,0);
+			Vector3 trans = new Vector3(-3f,-3f,0);
 			if (i == 0)
 			{
 				point = point1;

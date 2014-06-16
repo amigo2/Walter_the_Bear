@@ -7,9 +7,12 @@ public class ShapeWinTrigger : MonoBehaviour {
 	public bool hasCollideWith1 = false;
 	public bool hasCollideWith2 = false;
 	public bool hasCollideWith3 = false;
+	public GUIText winText;
 
 	Transform myTransform;
 	string name;
+
+	int counter = 0;
 	
 	int collision = 4;
 	
@@ -18,8 +21,10 @@ public class ShapeWinTrigger : MonoBehaviour {
 		
 		myTransform = transform;
 		name = myTransform.name;
+
+
 		
-		Debug.Log(myTransform.name);
+		//Debug.Log(myTransform.name);
 		//myTransform.name = 
 		anyPiece = GameObject.Find("piece1");
 		
@@ -28,7 +33,10 @@ public class ShapeWinTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+		if (counter == 3) {
+			Debug.Log("Wiiiiiin");
+				}
 	}
 	
 	void OnTriggerEnter( Collider piece)
@@ -38,11 +46,14 @@ public class ShapeWinTrigger : MonoBehaviour {
 		
 		if (name == "ColliderPiece1")
 		{
+
 			if (piece.name == "piece1")
 			{
 				hasCollideWith1 = true;
-				Debug.Log("ColliderPiiiiiiiiiiiiece1");
+				counter ++;
+				//Debug.Log("ColliderPiiiiiiiiiiiiece1");
 			}
+
 			
 			//hasCollideWith1 = false;
 		}
@@ -51,8 +62,9 @@ public class ShapeWinTrigger : MonoBehaviour {
 		{
 			if (piece.name == "piece2")
 			{
+				counter ++;
 				hasCollideWith2 = true;
-				Debug.Log("ColliderPiiiiiiiiiiiiece2");
+				//Debug.Log("ColliderPiiiiiiiiiiiiece2");
 			}
 			//hasCollideWith2 = false;
 		}
@@ -60,8 +72,9 @@ public class ShapeWinTrigger : MonoBehaviour {
 		{
 			if (piece.name == "piece3")
 			{
+				counter ++;
 				hasCollideWith3 = true;
-				Debug.Log("ColliderPiiiiiiiiiiiiece3");
+				//Debug.Log("ColliderPiiiiiiiiiiiiece3");
 			}
 			//hasCollideWith3 = false;
 		}
@@ -69,5 +82,4 @@ public class ShapeWinTrigger : MonoBehaviour {
 		
 	}
 	
-}
-
+}	

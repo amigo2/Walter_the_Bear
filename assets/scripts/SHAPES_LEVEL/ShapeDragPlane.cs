@@ -19,13 +19,13 @@ public class ShapeDragPlane : MonoBehaviour {
 	private Vector3 offset;
 	
 	Vector3 sidePositionPiece1 = new Vector3(-5.0f, 0.0f, 0.0f);
-	Vector3 sidePositionPiece2 = new Vector3(-5.0f, -4.5f, 0.0f);
-	Vector3 sidePositionPiece3 = new Vector3(-5.0f, 4.5f, 0.0f);
+	Vector3 sidePositionPiece2 = new Vector3(-5.0f, -3.5f, 0.0f);
+	Vector3 sidePositionPiece3 = new Vector3(-5.0f, 3.5f, 0.0f);
 	
 	
-	Vector3 winPositionPiece1 = new Vector3(6.0f, 4.5f, 0.0f);
-	Vector3 winPositionPiece2 = new Vector3(6.0f, 0.0f, 0.0f);
-	Vector3 winPositionPiece3 = new Vector3(6.0f, -4.5f, 0.0f);
+	Vector3 winPositionPiece1 = new Vector3(4.5f, 3.5f, 0.0f);
+	Vector3 winPositionPiece2 = new Vector3(4.5f, 0.0f, 0.0f);
+	Vector3 winPositionPiece3 = new Vector3(4.5f, -4.5f, 0.0f);
 	
 	bool isRelease = false;
 	
@@ -95,7 +95,6 @@ public class ShapeDragPlane : MonoBehaviour {
 			newPositionPiece1.x = Mathf.Round(winPositionPiece1.x / winPositionPiece1.x) * winPositionPiece1.x;
 			newPositionPiece1.y = Mathf.Round(winPositionPiece1.y / snapToGridY) * snapToGridY;
 			newPositionPiece1.z = Mathf.Round(newPositionPiece1.z / snapToGridZ) * snapToGridZ;*/
-
 			piece1.gameObject.transform.position = winPositionPiece1;
 			
 			
