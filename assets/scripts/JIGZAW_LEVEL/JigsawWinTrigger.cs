@@ -14,6 +14,7 @@ public class JigsawWinTrigger : MonoBehaviour {
 
     int collision = 4;
 
+
 	// Use this for initialization
 	void Start () {
 
@@ -30,7 +31,7 @@ public class JigsawWinTrigger : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-	
+   
 	}
 
     void OnTriggerEnter( Collider piece)

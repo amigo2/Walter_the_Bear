@@ -12,7 +12,7 @@ public class ShapeDragPlane : MonoBehaviour {
 	GameObject colliderPiece1;
 	GameObject colliderPiece2;
 	GameObject colliderPiece3;
-	
+
 	ShapeWinTrigger ShapeWinTriggerClass1, ShapeWinTriggerClass2, ShapeWinTriggerClass3;
 	
 	private Vector3 screenPoint;
@@ -155,6 +155,8 @@ public class ShapeDragPlane : MonoBehaviour {
 			piece3.gameObject.transform.position = sidePositionPiece3;
 			
 		}
+
+        Debug.Log(countToWin);
 		
 		
 	}

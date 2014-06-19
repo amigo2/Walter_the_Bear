@@ -14,8 +14,13 @@ public class ShapesGameManager : MonoBehaviour {
 	public GameObject shape2;
 	public GameObject shape3;
 
+    public AudioClip wellDone;
+
+    public GUIText youWinText;
+
 	Vector3 shapeStartPosition = new Vector3(5f, 10f, 0f);
-	ShapeDragPlane shapeDragPlaneClass;
+    ShapeDragPlane shapeDragPlaneClass1, shapeDragPlaneClass2, shapeDragPlaneClass3;
+    ShapeWinTrigger shapeWinTriggerClass;
 	
 	Vector3 startPoint;
 	float startTime;
@@ -23,7 +28,7 @@ public class ShapesGameManager : MonoBehaviour {
 	
 	Vector3 targetPosition = new Vector3(-5, 0, 0);
 
-
+    int win = 0;
 	
 	float steps = 100.0f;
 	float t = 20.0f;
@@ -50,61 +55,64 @@ public class ShapesGameManager : MonoBehaviour {
         GUI.matrix = svMatrix;
     }
 
-	public void Start()
-	{
+    public void Start()
+    {
 
-		startPoint = transform.position;
-		startTime = Time.time;
-		
-		/*jigsawPiece1 = (GameObject)GameObject.Instantiate( jigsawPiece1, jigsawStartPosition, Quaternion.identity);
-        jigsawPiece2 = (GameObject)GameObject.Instantiate(jigsawPiece2, new Vector3(23, 10, 0), Quaternion.identity);
-        jigsawPiece3 = (GameObject)GameObject.Instantiate(jigsawPiece3, new Vector3(5, -2.5f, 0), Quaternion.identity);
-        jigsawPiece4 = (GameObject)GameObject.Instantiate(jigsawPiece4, new Vector3(23, -2.5f, 0), Quaternion.identity);*/
-
+        startPoint = transform.position;
+        startTime = Time.time;
 
         shape1 = (GameObject)GameObject.Instantiate(shape1, new Vector3(targetPosition.x, targetPosition.y, 0), Quaternion.identity);
         shape2 = (GameObject)GameObject.Instantiate(shape2, new Vector3(targetPosition.x, targetPosition.y - 3.5f, 0), Quaternion.identity);
         shape3 = (GameObject)GameObject.Instantiate(shape3, new Vector3(targetPosition.x, targetPosition.y + 3.5f, 0), Quaternion.identity);
-		
-		shape1.transform.name = "piece1";
-		shape2.transform.name = "piece2";
-		shape3.transform.name = "piece3";
-		
-	}
 
-	void Update()
-	{
-		WinState();
-	}
+        shape1.transform.name = "piece1";
+        shape2.transform.name = "piece2";
+        shape3.transform.name = "piece3";
 
-	void WinState()
-	{
-		/*if (jigSawDragPlaneClass != null)
+    }
+
+    void Update()
+    {
+        WinState();
+
+    }
+
+    void WinState()
+    {
+
+        try
         {
-            jigSawDragPlaneClass = (JigsawDragPlane)GameObject.Find("piece1").GetComponent<JigsawDragPlane>();
+            shapeDragPlaneClass1 = (ShapeDragPlane)GameObject.Find("piece1").GetComponent<ShapeDragPlane>();
+            shapeDragPlaneClass2 = (ShapeDragPlane)GameObject.Find("piece2").GetComponent<ShapeDragPlane>();
+            shapeDragPlaneClass3 = (ShapeDragPlane)GameObject.Find("piece3").GetComponent<ShapeDragPlane>();
+        }
 
-        }*/
-		
-		try
-		{
-			shapeDragPlaneClass = (ShapeDragPlane)GameObject.Find("piece1").GetComponent<ShapeDragPlane>();
-		}
-		
-		catch
-		{
-			print("my little error");
-		}
-		
-		//Debug.Log("Count to Win" + shapeDragPlaneClass.countToWin);
-		
-		if (shapeDragPlaneClass.countToWin == 4)
-		{
+        catch
+        {
+            print("my little error");
+        }
 
-			GUI.Label(new Rect(10, 200, 200, 50), "'<size = 100>You Win!!!'");
-			Debug.Log("You winn"); 
-		}
-		
-	}
+        //Debug.Log("Count to Win" + shapeDragPlaneClass.countToWin);
+        
+
+        if ((shapeDragPlaneClass1.countToWin >= 3 || shapeDragPlaneClass2.countToWin >= 3 || shapeDragPlaneClass3.countToWin >= 3) && win == 0)
+        {
+            win = 1;
+            Invoke("GameFinished", 1.0f);
+            Debug.Log("You winn");
+        }
+        
+
+    }
+
+    void GameFinished()
+    {
+        AudioSource.PlayClipAtPoint(wellDone, Camera.main.transform.position);
+
+        StartCoroutine(Fade.use.Alpha(youWinText.material, 1, 0, 1f));
+        youWinText.text = "Well Done";
+        //StartCoroutine(Fade.use.Alpha(youWinText.material, 0, 1, 0.4f));
+    }
 
 
 }

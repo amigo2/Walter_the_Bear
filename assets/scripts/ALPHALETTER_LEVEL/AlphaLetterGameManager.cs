@@ -8,9 +8,10 @@ public class AlphaLetterGameManager : MonoBehaviour
 {
     public List<GameObject> alphaletters = new List<GameObject>();
     List<GameObject> alreadySpawn = new List<GameObject>();
+    List<GameObject> particleList = new List<GameObject>();
 
 	public int test;
-
+    public GameObject particles;
     public AudioClip a;
     public AudioClip b;
     public AudioClip c;
@@ -41,13 +42,18 @@ public class AlphaLetterGameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && spawned.gameObject != null)
         //if (Input.GetMouseButtonDown(0))
         {
-            //Physics.Raycast(ray, out hit, Mathf.Infinity);
-            //if (hit.collider != null)
-            //{
+            Physics.Raycast(ray, out hit, Mathf.Infinity);
+
+            if (hit.collider != null)
+            {
                 LetterSounds();
+
+                InstantiateParticles(hit);
+                particleList.Add(particles);
+
                 Destroy(spawned.gameObject);
                 Invoke("InstantiateLetters", 1);
-            //}
+            }
             
         }
         
@@ -63,13 +69,19 @@ public class AlphaLetterGameManager : MonoBehaviour
             spawned.gameObject.transform.localScale = letterScale;
             spawned.name = "Letter" + index;
             index++;
-            
-           
+
+            DestroyParticles();
         }
         else
         {
             //Well done!!
         }
+    }
+
+    void InstantiateParticles(RaycastHit hit)
+    {
+        particles = (GameObject)GameObject.Instantiate(particles, new Vector3(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y, -2),
+            Quaternion.Euler(new Vector3(180, 0, 0)));
     }
 
     void LetterSounds()
@@ -89,6 +101,15 @@ public class AlphaLetterGameManager : MonoBehaviour
             AudioSource.PlayClipAtPoint(c, Camera.main.transform.position);
 
         }
+    }
+
+    void DestroyParticles()
+    {
+        for (int i = 0; i < particleList.Count - 1; i++)
+        {
+            Destroy(particleList[i]);
+        }
+
     }
 
 

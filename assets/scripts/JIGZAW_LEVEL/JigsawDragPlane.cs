@@ -17,7 +17,6 @@ public class JigsawDragPlane : MonoBehaviour {
 
     public JigsawWinTrigger JigsawWinTriggerClass1, JigsawWinTriggerClass2, JigsawWinTriggerClass3, JigsawWinTriggerClass4;
 
-
 	private Vector3 screenPoint;
     private Vector3 offset;
 
@@ -25,7 +24,6 @@ public class JigsawDragPlane : MonoBehaviour {
     Vector3 sidePositionPiece2 = new Vector3(-20f, 4f, 0.0f);
     Vector3 sidePositionPiece3 = new Vector3(-20f, -8f, 0.0f);
     Vector3 sidePositionPiece4 = new Vector3(-20f, -18f, 0.0f);
-
 
     Vector3 winPositionPiece1 = new Vector3(5.0f  , 10.0f, 0.0f);
     Vector3 winPositionPiece2 = new Vector3(23.0f , 10.0f, 0.0f);
@@ -73,7 +71,6 @@ public class JigsawDragPlane : MonoBehaviour {
         //Debug.Log("Count to win " + countToWin);
         
     }
-
  
     void OnMouseDown()
     {
@@ -95,7 +92,6 @@ public class JigsawDragPlane : MonoBehaviour {
         transform.position = curPosition;
 
     }
-
 
     void OnMouseUp()
     {
@@ -184,8 +180,9 @@ public class JigsawDragPlane : MonoBehaviour {
                 piece4.gameObject.transform.position = newPositionPiece4;
 
             }
+
+            Debug.Log(countToWin);
        
-        
     }
 
 

@@ -8,21 +8,21 @@ public class CountGame : MonoBehaviour {
 
     List<GameObject> itemsSpawned = new List<GameObject>();
 	public List<GameObject> numbersList = new List<GameObject>();
+	List<GameObject> particleList = new List<GameObject>();
 
     float originalWidth = 640;
     float originalWeight = 480;
+    float topStart = 0, botStart = 0;
+
+    public GameObject particles;
 
     GameObject item;
-
-    Vector3 scale;
-    bool gamesTerminates = false;
-
     GameObject[] myCube;
 
+    Vector3 scale;
+
+    bool gamesTerminates = false;
     bool itemIsAlive = true;
-
-	float start=0;
-
 
     public AudioClip one;
     public AudioClip two;
@@ -62,26 +62,6 @@ public class CountGame : MonoBehaviour {
  
     }
 
-	void InstantiateNumber(int index)
-	{
-		float offset = 0.75f;
-		
-		if (index == 0)
-		{
-			Vector3 num10location0 = new Vector3(numLocation.x+offset, numLocation.y, numLocation.z);
-			Vector3 num10location1 = new Vector3(numLocation.x-offset, numLocation.y, numLocation.z);
-			spawned10 = (GameObject)GameObject.Instantiate(numbersList[0], num10location0, Quaternion.identity);
-			spawned = (GameObject)GameObject.Instantiate(numbersList[1], num10location1, Quaternion.identity);
-		}
-		else
-		{
-			spawned = (GameObject)GameObject.Instantiate(numbersList[index], numLocation, Quaternion.identity);
-			spawned.name = "Number" + index;
-		}
-
-		
-	}
-
     void Update()
     {
 
@@ -102,8 +82,14 @@ public class CountGame : MonoBehaviour {
                 
                 
                 rest--;
+
+                InstantiateParticles(hit);
+                particleList.Add(particles);
+                
                 Destroy(hit.collider.gameObject);
+                
                 //Debug.Log("rest = " + rest);
+
                 WellDone();
 
                 if (rest == 0 && counter <= 10)
@@ -124,12 +110,37 @@ public class CountGame : MonoBehaviour {
                     Invoke("GameFinished", myTime);
 
                 }
-            }
 
-           
+            }
 
         }
 
+    }
+
+	void InstantiateNumber(int index)
+	{
+		float offset = 0.75f;
+		
+		if (index == 0)
+		{
+			Vector3 num10location0 = new Vector3(numLocation.x+offset, numLocation.y, numLocation.z);
+			Vector3 num10location1 = new Vector3(numLocation.x-offset, numLocation.y, numLocation.z);
+			spawned10 = (GameObject)GameObject.Instantiate(numbersList[0], num10location0, Quaternion.identity);
+			spawned = (GameObject)GameObject.Instantiate(numbersList[1], num10location1, Quaternion.identity);
+		}
+		else
+		{
+			spawned = (GameObject)GameObject.Instantiate(numbersList[index], numLocation, Quaternion.identity);
+			spawned.name = "Number" + index;
+		}
+
+		
+	}
+
+    void InstantiateParticles(RaycastHit hit)
+    {
+        particles = (GameObject)GameObject.Instantiate(particles, new Vector3(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y, -2), 
+            Quaternion.Euler(new Vector3(180, 0, 0)));
     }
 
     void InstantiateObject()
@@ -137,47 +148,57 @@ public class CountGame : MonoBehaviour {
         float spacer = 0;
 		float topSpacer = 0;
         float botSpacer = 0;
+
         for (int i = 0; i < counter; i++)
         {
             if (i < 5 && counter < 6)
             {
                 item = (GameObject)GameObject.Instantiate(clickItem,
-                    new Vector3(start + spacer, clickItem.GetComponent<BoxCollider>().bounds.size.y, 0), Quaternion.identity);
+                    new Vector3(topStart + spacer, clickItem.GetComponent<BoxCollider>().bounds.size.y, 0), Quaternion.identity);
                 spacer+=3;
             }
             
             else if (i < 5)
             {
                 item = (GameObject)GameObject.Instantiate(clickItem,
-                    new Vector3(start + topSpacer, clickItem.GetComponent<BoxCollider>().bounds.size.y + 2.5f, 0), Quaternion.identity);
+                    new Vector3(topStart + topSpacer, clickItem.GetComponent<BoxCollider>().bounds.size.y + 2.5f, 0), Quaternion.identity);
                 topSpacer += 3;
             }
             else
             {
                 item = (GameObject)GameObject.Instantiate(clickItem,
-                    new Vector3(start + botSpacer, clickItem.GetComponent<BoxCollider>().bounds.size.y - 2.5f, 0), Quaternion.identity);
+                    new Vector3(botStart + botSpacer, clickItem.GetComponent<BoxCollider>().bounds.size.y - 2.5f, 0), Quaternion.identity);
                 botSpacer += 3;
             }
 
             item.name = "Item" + counter;
             rest++;
 
-            
-            //Debug.Log("I'm Here" + clickItem);
 
         }
+
+        //Debug.Log("I'm Here");
+
         if (counter < 5)
-            start -= 1.5f;
+            topStart -= 1.5f;
+        else if (counter > 5)
+            botStart -= 1.5f;
+
         counter++;
+        DestroyParticles();
+
+
         //Debug.Log("Added rest to total = " + rest);
         //Debug.Log("Added counter to total = " + counter);
 
     }
 
-    void WellDone()
+    void DestroyParticles()
     {
-        //AudioSource.PlayClipAtPoint(clickSound, Camera.main.transform.position);
-
+        for (int i = 0; i < particleList.Count-1; i++)
+        {
+            Destroy(particleList[i]);
+        }
         
     }
 
@@ -192,20 +213,10 @@ public class CountGame : MonoBehaviour {
 		{
             StartCoroutine(Fade.use.Alpha(spawned.renderer.material, 1, 0, 0.2f));
 			StartCoroutine(Fade.use.Alpha(spawned10.renderer.material, 1, 0, 0.2f));
+            StartCoroutine(Fade.use.Alpha(youWinText.material, 1, 0, 0.4f));
 		}
 
-        StartCoroutine(Fade.use.Alpha(youWinText.material, 1, 0, 0.4f));
-
         Destroy(spawned.gameObject, 1);
-    }
-
-    void GameFinished()
-    {
-        AudioSource.PlayClipAtPoint( wellDone, Camera.main.transform.position);
-        StartCoroutine ( Fade.use.Alpha( youWinText.material, 0, 1, 0.4f ));
-        youWinText.text = "Well Done";
-        StartCoroutine(Fade.use.Alpha(youWinText.material, 1, 0, 1f));
-        //Invoke("DestroyText", 2);
     }
 
     void WinTime()
@@ -283,9 +294,31 @@ public class CountGame : MonoBehaviour {
 
             Invoke("DestroyText", 0.5f);
         }
-       
-  
 
+    }
+
+    void GameFinished()
+    {
+        AudioSource.PlayClipAtPoint( wellDone, Camera.main.transform.position);
+
+        StartCoroutine (Fade.use.Alpha(youWinText.material, 0, 1, 0.4f));
+        youWinText.text = "Well Done";
+        StartCoroutine (Fade.use.Alpha(youWinText.material, 1, 0, 1.0f));
+
+        for (int i = 0; i < particleList.Count; i++)
+        {
+            Destroy(particleList[i]);
+        }
+ 
+    }
+
+
+
+    void WellDone()
+    {
+        //AudioSource.PlayClipAtPoint(clickSound, Camera.main.transform.position);
+
+        
     }
 
     void OnGUI()

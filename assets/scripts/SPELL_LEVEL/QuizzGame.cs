@@ -32,10 +32,14 @@ public class QuizzGame : MonoBehaviour {
 
     Vector3 xPos = new Vector3(-5, -5, 0);
 
-
     GameObject letter;
 
     GameObject animal;
+
+    public GUIText youWinText;
+    public GUIText youLoseText;
+    public GameObject particles;
+    List<GameObject> particleList = new List<GameObject>();
 
     int indexAnimals = 1;
     int counterLetters = 0;
@@ -48,7 +52,50 @@ public class QuizzGame : MonoBehaviour {
         //Print();
 
     }
+    
+    void Update()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
 
+
+        if (Input.GetMouseButtonDown(0))
+        {
+
+            Physics.Raycast(ray, out hit, Mathf.Infinity);
+            if (hit.collider != null)
+            {
+                //Debug.Log(hit.collider.gameObject.name);
+                string firstLetterAnimal = hit.collider.gameObject.name.Substring(0, 1);
+                string firstLetter = letter.gameObject.name.Substring(0, 1);
+
+                InstantiateParticles(hit);
+                particleList.Add(particles);
+
+                Destroy(hit.collider.gameObject);
+
+                if (firstLetterAnimal == firstLetter)
+                {
+                    Debug.Log("You winnnn !!!");
+                    youWinText.text = "You Win!";
+                    youWinText.pixelOffset = new Vector2(0, 200);
+                    Invoke("ResetWinText", 1.0f);
+
+                }
+                else
+                {
+                    Debug.Log("Noooooooooooooooooooo");
+                    //StartCoroutine(Fade.use.Alpha(youLoseText.material, 1, 0, 0.4f));
+                    youLoseText.text = "Wrong";
+                    Invoke("ResetLoseText", 1.0f);
+
+                }
+
+            }
+
+            
+        }
+    }
 
     // Instatite only 3.
     void InstantiateAnimals(GameObject[] obj)
@@ -106,45 +153,32 @@ public class QuizzGame : MonoBehaviour {
         
     }
 
-
-
-    void Update()
+    void InstantiateParticles(RaycastHit hit)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-
-        if (Input.GetMouseButtonDown(0))
-        {
-
-            Physics.Raycast(ray, out hit, Mathf.Infinity);
-            if (hit.collider != null)
-            {
-                //Debug.Log(hit.collider.gameObject.name);
-                string firstLetterAnimal = hit.collider.gameObject.name.Substring(0, 1);
-                string firstLetter = letter.gameObject.name.Substring(0, 1);
-
-                Destroy(hit.collider.gameObject);
-
-                if (firstLetterAnimal == firstLetter)
-                {
-                    Debug.Log("You winnnn !!!");
-
-                }
-                else
-                {
-                    Debug.Log("Noooooooooooooooooooo");
-                }
-
-            }
-
-            
-        }
+        particles = (GameObject)GameObject.Instantiate(particles, new Vector3(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y, -2),
+            Quaternion.Euler(new Vector3(180, 0, 0)));
     }
 
+    void DestroyParticles()
+    {
+        for (int i = 0; i < particleList.Count - 1; i++)
+        {
+            Destroy(particleList[i]);
+        }
 
+    }
 
-    // Shufle letters.
+    void ResetWinText()
+    {
+        youWinText.text = "";
+    }
+
+    void ResetLoseText()
+    {
+        youLoseText.text = "";
+    }
+
+    // Shuffle letters.
     void SuffleWithoutRepeating( GameObject[] obj)
     {
         if (counterLetters == 3)
